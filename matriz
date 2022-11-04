@@ -1,0 +1,27 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		//criar matriz
+		cadeia contatos[4][4]
+
+		escreva("Nome do 1º contato: \t")
+		leia(contatos[0][0])
+		limpa()
+
+		escreva("\nemail do 1º contato: \t")
+		leia(contatos[0][1])
+		limpa()
+
+		escreva("\nbairro do 1º contato: \t")
+		leia(contatos[0][2])
+		limpa()
+
+		escreva("\ncidade do 1º contato: \t")
+		leia(contatos[0][3])
+		limpa()
+
+		escreva("\nnome: ", contatos[0][0], "\nemail: ", contatos[0][1], "\nbairro: ", contatos[0][2], "\ncidade: ", contatos[0][3])
+	}
+}
