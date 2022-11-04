@@ -39,7 +39,7 @@ programa
 		      	area[n] = mat.arredondar(area[n], 2)
 		      	largura[n] = mat.arredondar(largura[n], 2)
 		      	comprimento[n] = mat.arredondar(comprimento[n], 2)
-		      	escreva("\ncomodo ", comodos[n], "\t largura ", largura[n], "\t comprimento ", comprimento[n], "\t area ", area[n])
+		      	escreva("\ncomodo: ", comodos[n], "\t largura: ", largura[n], "\t comprimento: ", comprimento[n], "\t area: ", area[n])
 				
 		      
 		      }
