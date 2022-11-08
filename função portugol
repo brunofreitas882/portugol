@@ -1,0 +1,56 @@
+programa
+{
+	
+	funcao inteiro somar(inteiro &num1, inteiro &num2){
+		retorne num1 + num2
+	}
+
+	funcao inteiro subtracao(inteiro &num1, inteiro &num2){
+		retorne num1 - num2
+	}
+
+	funcao inteiro dividir(inteiro &num1, inteiro &num2){
+		retorne num1 / num2
+	}
+
+	funcao inteiro multiplicar(inteiro &num1, inteiro &num2){
+		retorne num1 * num2
+	}
+
+	funcao inicio()
+	{
+		inteiro num1[5], num2[5]
+
+		///////////////// somar /////////////////////////
+		escreva("\ndigite o numero 1º para somar: \t")
+		leia(num1[0])
+
+		escreva("\ndigite o numero 2º para somar: \t")
+		leia(num2[0])
+
+		///////////////// subtrair /////////////////////
+		escreva("\ndigite o numero 1º para subtrair: \t")
+		leia(num1[1])
+
+		escreva("\ndigite o numero 2º para subtrair: \t")
+		leia(num2[1])
+ 
+		////////////////// dividir //////////////////////
+		escreva("\ndigite o numero 1º para dividir: \t")
+		leia(num1[2])
+
+		escreva("\ndigite o numero 2º para dividir: \t")
+		leia(num2[2])
+
+		////////////////// multiplicar //////////////////////
+		escreva("\ndigite o numero 1º para multiplicar: \t")
+		leia(num1[3])
+
+		escreva("\ndigite o numero 2º para multiplicar: \t")
+		leia(num2[3])
+
+		escreva("\nresultado da soma: ", num1[0] + num2[0], "\nresultado da subritação: ", num1[1] - num2[1], "\nresultado da divisão: ", num1[2] / num2[2], "\nresultado da multiplicação: ", num1[3] * num2[3
+		])
+
+	}	
+}
