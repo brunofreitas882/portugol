@@ -1,0 +1,44 @@
+programa
+{
+ 
+	funcao real divisao(real num1, real num2){
+	retorne num1 / num2
+	}
+	funcao real mult(real num1, real num2){
+		retorne num1 * num2
+	}
+	
+	
+	funcao inicio()
+	{
+		real pessoas, conta, gorjeta[2], totalpessoas
+		
+		escreva("quantas pessoas iram dividir a conta?: ")
+		leia(pessoas)
+		limpa()
+		
+		escreva("digite o valor da conta?: ")
+		leia(conta)
+		limpa()
+
+		escreva("quanto de gorjeta vocês iram dar?")
+		escreva("\n \n1____10%     2____12%     3____15%\t")
+		leia(gorjeta[0])
+
+		se (gorjeta[0] == 1){
+		gorjeta[0] = pessoas * conta / 0.10
+		}
+		senao se (gorjeta[0] == 2){
+		gorjeta[0] = pessoas * conta / 0.12
+		}	
+		senao se (gorjeta[0] == 3){
+		gorjeta[0] = pessoas * conta / 0.15
+		}
+		gorjeta[1] = gorjeta[0] / conta
+	
+	escreva("total", gorjeta[1])
+	}
+
+
+	
+}
