@@ -1,0 +1,81 @@
+programa
+{
+	inclua biblioteca Matematica
+	
+	funcao real salariobruto(real horas_trabalhadas, real salario_hora, inteiro dependentes){
+	retorne (horas_trabalhadas * salario_hora) + (dependentes * 50)
+	}
+	
+	funcao real calculo_inss(real salario_bruto){
+		real inss
+		se (salario_bruto <= 1000){
+			inss = salario_bruto * 8.5 / 100
+		}
+		senao{
+			inss = salario_bruto * 9 / 100
+		}
+		retorne inss
+	}
+	
+	funcao real calculoir(real salario_bruto){
+		real ir
+		se (salario_bruto <= 500){
+			ir = 0.0
+		}
+		senao se(salario_bruto <= 1000){
+			ir = salario_bruto * 5 / 100
+		}
+		senao{
+			ir = salario_bruto * 7 / 100
+		}
+		retorne ir 
+	}
+	
+	funcao real salario_liq(real salario_bruto, real inss, real ir){
+	 	 real liquido
+	 	 liquido = salario_bruto - inss - ir
+	retorne liquido
+}
+	funcao real totaldep(real dependentes){
+		dependentes = dependentes * 50
+		retorne dependentes
+	}
+	funcao inicio()
+	{
+		cadeia nome
+		inteiro dependentes, valor_dependentes
+		real horas_trabalhadas, salario_hora, salario_inicial, salario_bruto, salario_liquido, inss, ir
+
+
+
+		escreva("digite seu nome:\t")
+		leia(nome)
+		limpa()
+		
+		escreva("digite quantas horas trabalhadas:\t")
+		leia(horas_trabalhadas)
+		limpa()
+
+		escreva("digite de quanto você cobra por hora trabalhada:\t")
+		leia(salario_hora)
+		limpa()
+		
+		escreva("digite seus dependentes(FILHOS):\t")
+		leia(dependentes)
+		limpa()
+
+		salario_bruto = salariobruto(horas_trabalhadas, salario_hora, dependentes)
+		inss = calculo_inss(salario_bruto)
+		ir = calculoir(salario_bruto)
+		salario_liquido = salario_liq(salario_bruto, inss, ir)
+		
+		escreva("\nnome do fucionario:\t", nome)
+		escreva("\ntotal horas trabalhadas:\t", horas_trabalhadas)
+		escreva("\nsalario horas:\t", salario_hora)
+		escreva("\ntotal de dependentes:\t", dependentes)
+		escreva("\nsalario:\t", salario_bruto)
+		escreva("\nadd_dependentes:\t", dependentes)
+		escreva("\ndesconto INSS:\t", inss)
+		escreva("\ndesconto ir:\t")
+	}
+}
